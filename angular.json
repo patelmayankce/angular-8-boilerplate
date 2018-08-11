@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "a": {
+    "angular-6-boilerplate": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -25,43 +25,63 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
+            "local": {
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ]
+            },
+            "development": {
+              "sourceMap": true,
+              "aot": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ]
+            },
             "production": {
+              "sourceMap": true,
+              "aot": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "a:build"
+            "browserTarget": "angular-6-boilerplate:build"
           },
           "configurations": {
+            "local": {
+              "browserTarget": "angular-6-boilerplate:build:local"
+            },
+            "development": {
+              "browserTarget": "angular-6-boilerplate:build:development"
+            },
             "production": {
-              "browserTarget": "a:build:production"
+              "browserTarget": "angular-6-boilerplate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "a:build"
+            "browserTarget": "angular-6-boilerplate:build"
           }
         },
         "test": {
@@ -74,7 +94,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -95,7 +117,7 @@
         }
       }
     },
-    "a-e2e": {
+    "angular-6-boilerplate-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +125,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "a:serve"
+            "devServerTarget": "angular-6-boilerplate:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "a:serve:production"
+              "devServerTarget": "angular-6-boilerplate:serve:production"
             }
           }
         },
@@ -123,5 +145,14 @@
       }
     }
   },
-  "defaultProject": "a"
+  "defaultProject": "angular-6-boilerplate",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "styleext": "css"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
 }

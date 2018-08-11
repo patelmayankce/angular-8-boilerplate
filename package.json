@@ -1,15 +1,50 @@
 {
-  "name": "a",
-  "version": "0.0.0",
+  "name": "angular-6-boilerplate",
+  "version": "1.0.0",
+  "description": "Angular 6 Boilerplate",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --configuration=local --o --host 0.0.0.0",
+    "start:dev": "ng serve --configuration=development --o --host 0.0.0.0",
+    "start:prod": "ng serve --configuration=production --o --host 0.0.0.0",
+    "build:local": "ng build --configuration=local",
+    "build:dev": "ng build --prod --configuration=development",
+    "build:prod": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "generate": "ng generate",
+    "compodoc:gen": "./node_modules/.bin/compodoc -p src/tsconfig.app.json",
+    "compodoc:serve": "./node_modules/.bin/compodoc -s src/tsconfig.app.json",
+    "compodoc": "npm run compodoc:gen && npm run compodoc:serve",
+    "precommit": "lint-staged",
+    "lint": "tslint --fix --config tslint.json --project tsconfig.json",
+    "format:fix": "pretty-quick --staged"
   },
-  "private": true,
+  "lint-staged": {
+    "src/**/*.ts": [
+      "pretty-quick --staged",
+      "tslint --fix --config tslint.json --project tsconfig.json",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patelmayankce/angular-6-boilerplate.git"
+  },
+  "keywords": [
+    "angular",
+    "angular6",
+    "angularjs",
+    "starter-kit",
+    "boilerplate",
+    "angular.io"
+  ],
+  "author": "Mayank Patel <patelmayankce@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patelmayankce/angular-6-boilerplate/issues"
+  },
+  "homepage": "https://github.com/patelmayankce/angular-6-boilerplate#readme",
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
@@ -20,7 +55,11 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@ng-bootstrap/ng-bootstrap": "^2.2.2",
+    "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
+    "jquery": "^3.3.1",
+    "luxon": "^1.3.3",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
@@ -29,10 +68,14 @@
     "@angular/cli": "~6.1.3",
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
+    "@compodoc/compodoc": "^1.1.3",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jquery": "^3.3.5",
+    "@types/luxon": "^1.2.2",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "husky": "^0.14.3",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^3.0.0",
@@ -40,6 +83,9 @@
     "karma-coverage-istanbul-reporter": "~2.0.0",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.14.2",
+    "pretty-quick": "^1.6.0",
     "protractor": "^5.4.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
