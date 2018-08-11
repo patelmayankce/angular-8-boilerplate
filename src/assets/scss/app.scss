@@ -1,0 +1,62 @@
+/*
+Author: Mayank Patel
+Email: patelmayankce@gmail.com
+File: scss
+*/
+
+/**
+ * Table Of Content
+ *
+ *  1. Globals
+ *  2. Headers
+ *  3. Navigations
+ *  4. Banners
+ *  5. Footers
+ *  6. Posts
+ *  7. Widgets
+ *  8. Custom Templates
+ */
+
+/*******************
+Global Styles
+*******************/
+
+* {
+  outline: none;
+}
+
+body {
+  background: $sidebar;
+  font-family: $bodyfont;
+  margin: 0;
+  overflow-x: hidden;
+  color: $bodytext;
+  font-weight: 300;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background: $white;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a {
+  color: $themecolor;
+  &:hover,
+  &:focus {
+    color: $headingtext;
+  }
+}
+
+a.link {
+  color: $headingtext;
+  &:hover,
+  &:focus {
+    color: $themecolor;
+  }
+}
