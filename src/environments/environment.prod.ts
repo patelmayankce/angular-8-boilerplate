@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  env: 'PROD',
+  production: true,
+  serverBaseUrl: 'http://productionurl.com',
+  serverUrl: 'http://productionurl.com'
 };
