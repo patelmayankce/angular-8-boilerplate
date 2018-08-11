@@ -1,0 +1,19 @@
+.signIn {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.login-register .col-md-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.login-register .form-horizontal label {
+  margin-left: 5px;
+}
+
+.login-register .btn-info {
+  margin-top: 20px;
+}

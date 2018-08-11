@@ -1,0 +1,68 @@
+<section id="wrapper" class="login-register login-sidebar">
+  <div class="login-box card">
+    <div class="card-body">
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="form-horizontal form-material" id="loginform" novalidate>
+        <a href="javascript:void(0)" class="text-center db logo-container">
+          <img src="assets/images/pronto-logo.svg" class="logo-img" alt="Home" width="" />
+          <img src="assets/images/pronto-name.svg" alt="Home" class="logo-name-img" />
+        </a>
+        <h3 class="box-title m-t-40 m-b-0">Sign In</h3>
+        <div class="form-group m-t-20">
+          <div class="col-xs-12">
+            <input class="form-control" type="text" formControlName="username" placeholder="Username">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input class="form-control" type="password" formControlName="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-12">
+            <div class="custom-control custom-checkbox pull-left p-t-0">
+              <input id="checkbox-signup" class="custom-control-input" type="checkbox">
+              <label for="checkbox-signup" class="custom-control-label"> Remember me </label>
+            </div>
+            <span class="pull-right">
+              Forgot
+              <a href="javascript:void(0)" id="to-recover"> Password</a>? </span>
+          </div>
+        </div>
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12">
+            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" [disabled]="loginForm.invalid || isLoading">
+              <app-button-loader [isLoading]="isLoading" [label]="'Log In'"></app-button-loader>
+            </button>
+          </div>
+        </div>
+        <div class="form-group m-b-0">
+          <div class="col-sm-12 text-center">
+            <p>Don't have an account?
+              <a class="text-info m-l-5" [routerLink]="['/signup']">
+                <b>Sign Up</b>
+              </a>
+            </p>
+          </div>
+        </div>
+      </form>
+      <form [formGroup]="resetPasswordForm" class="form-horizontal" id="recoverform" novalidate>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <h3>Recover Password</h3>
+            <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <input class="form-control" type="text" formControlName="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12">
+            <a class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" [routerLink]="['/login']">Reset</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
