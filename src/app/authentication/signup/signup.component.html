@@ -8,32 +8,44 @@
         <small>Create your account and enjoy</small>
         <div class="form-group m-t-20">
           <div class="col-xs-12">
-            <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
+            <app-form-error-wrapper [control]="signupForm.controls['firstName']" [controlName]="'First Name'" [apiErrorType]="'firstName'">
+              <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
+            </app-form-error-wrapper>
           </div>
         </div>
         <div class="form-group ">
           <div class="col-xs-12">
-            <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
+            <app-form-error-wrapper [control]="signupForm.controls['lastName']" [controlName]="'Last Name'" [apiErrorType]="'lastName'">
+              <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
+            </app-form-error-wrapper>
           </div>
         </div>
         <div class="form-group ">
           <div class="col-xs-12">
-            <input class="form-control" type="text" formControlName="email" placeholder="Email">
+            <app-form-error-wrapper [control]="signupForm.controls['email']" [controlName]="'Email'" [apiErrorType]="'email'">
+              <input class="form-control" type="text" formControlName="email" placeholder="Email">
+            </app-form-error-wrapper>
           </div>
         </div>
         <div class="form-group ">
           <div class="col-xs-12">
-            <input class="form-control" type="text" formControlName="phone" placeholder="Phone">
+            <app-form-error-wrapper [control]="signupForm.controls['phone']" [controlName]="'Phone'" [apiErrorType]="'phone'">
+              <input class="form-control" type="text" formControlName="phone" placeholder="Phone">
+            </app-form-error-wrapper>
           </div>
         </div>
         <div class="form-group ">
           <div class="col-xs-12">
-            <input class="form-control" type="password" formControlName="password" placeholder="Password">
+            <app-form-error-wrapper [control]="signupForm.controls['password']" [controlName]="'Password'" [apiErrorType]="'password'">
+              <input class="form-control" type="password" formControlName="password" placeholder="Password">
+            </app-form-error-wrapper>
           </div>
         </div>
         <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" type="password" formControlName="cPassword" placeholder="Confirm Password">
+            <app-form-error-wrapper [control]="signupForm.controls['cPassword']" [controlName]="'Confirm Password'" [apiErrorType]="'cPassword'">
+              <input class="form-control" type="password" formControlName="cPassword" placeholder="Confirm Password">
+            </app-form-error-wrapper>
           </div>
         </div>
         <div class="form-group">

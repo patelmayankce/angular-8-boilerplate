@@ -17,8 +17,11 @@ import {
 } from '@app/core/http';
 import { LocalStorageService } from '@app/core/local-storage.service';
 import { RouteReusableStrategy } from '@app/core/route-reusable-strategy';
-import { UserService } from '@app/core/service';
-import { UtilService } from '@app/core/service/util.service';
+import {
+  ErrorMessageService,
+  UserService,
+  UtilService
+} from '@app/core/service';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, RouterModule],
@@ -31,6 +34,7 @@ import { UtilService } from '@app/core/service/util.service';
     ErrorHandlerInterceptor,
     UserService,
     UtilService,
+    ErrorMessageService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApiPrefixInterceptor,

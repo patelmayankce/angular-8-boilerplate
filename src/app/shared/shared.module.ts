@@ -8,6 +8,7 @@ import { FullComponent } from '@app/shared/layouts/full/full.component';
 import { SpinnerComponent } from '@app/shared/spinner.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ButtonLoaderComponent } from '@app/shared/button-loader';
+import { FormErrorWrapperComponent } from '@app/shared/form-error-wrapper/form-error-wrapper.component';
 
 @NgModule({
   imports: [
@@ -22,14 +23,16 @@ import { ButtonLoaderComponent } from '@app/shared/button-loader';
     BreadcrumbComponent,
     BlankComponent,
     FullComponent,
-    ButtonLoaderComponent
+    ButtonLoaderComponent,
+    FormErrorWrapperComponent
   ],
   exports: [
     SpinnerComponent,
     BreadcrumbComponent,
     BlankComponent,
     FullComponent,
-    ButtonLoaderComponent
+    ButtonLoaderComponent,
+    FormErrorWrapperComponent
   ],
   entryComponents: [],
   providers: []
