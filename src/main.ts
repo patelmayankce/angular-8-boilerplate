@@ -6,7 +6,19 @@ import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
+  if (window) {
+    window.console.log = function() {};
+  }
+  /**
+   * To enable PWA Service worker uncomment this code
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('ngsw-worker.js');
+    });
+  }
+   */
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err: any) => console.log(err));
