@@ -54,7 +54,14 @@ export class FormErrorWrapperComponent
     });
   }
 
-  formateError(errorMessage: string): string {
+  formateError(errorMessage: string, errorObj: any): string {
+    const types = ['min', 'max', 'requiredLength'];
+
+    types.forEach(type => {
+      if (!!errorObj[type]) {
+        errorMessage = errorMessage.replace(/{{value}}/g, errorObj[type]);
+      }
+    });
     return errorMessage.replace(/{{field}}/g, this.controlName);
   }
 

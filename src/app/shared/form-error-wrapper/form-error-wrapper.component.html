@@ -2,7 +2,7 @@
   <ng-content></ng-content>
   <ng-container *ngFor="let errorKey of errorKeys">
     <span class="help-block" *ngIf="control.hasError(errorKey) && control.touched">
-      {{formateError(errorObject[errorKey])}}
+      {{formateError(errorObject[errorKey],control.errors[errorKey])}}
     </span>
   </ng-container>
   <span class="help-block" *ngIf="apiErrorMessage">
