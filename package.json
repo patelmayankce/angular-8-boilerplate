@@ -1,7 +1,7 @@
 {
-  "name": "angular-6-boilerplate",
+  "name": "angular-7-boilerplate",
   "version": "1.0.0",
-  "description": "Angular 6 Boilerplate",
+  "description": "Angular 7 Boilerplate",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --configuration=local --o --host 0.0.0.0",
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patelmayankce/angular-6-boilerplate.git"
+    "url": "git+https://github.com/patelmayankce/angular-7-boilerplate.git"
   },
   "keywords": [
     "angular",
@@ -45,9 +45,9 @@
   "author": "Mayank Patel <patelmayankce@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/patelmayankce/angular-6-boilerplate/issues"
+    "url": "https://github.com/patelmayankce/angular-7-boilerplate/issues"
   },
-  "homepage": "https://github.com/patelmayankce/angular-6-boilerplate#readme",
+  "homepage": "https://github.com/patelmayankce/angular-7-boilerplate#readme",
   "dependencies": {
     "@angular/animations": "^7.0.0",
     "@angular/common": "^7.0.0",

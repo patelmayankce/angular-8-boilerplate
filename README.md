@@ -1,4 +1,4 @@
-# Angular 6 Boilerplate
+# Angular 7 Boilerplate
 
 1. Go to project folder and install dependencies:
 

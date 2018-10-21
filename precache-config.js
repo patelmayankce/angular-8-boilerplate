@@ -8,7 +8,7 @@ module.exports = {
   importScripts: [],
   plugins: [
     new SWPrecacheWebpackPlugin({
-      cacheId: 'angular-6-boilerplate',
+      cacheId: 'angular-7-boilerplate',
       filename: 'service-worker.js',
       staticFileGlobs: ['dist/index.html', 'dist/**.js', 'dist/**.css'],
       stripPrefix: 'dist/assets/',
