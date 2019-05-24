@@ -23,25 +23,6 @@
             "scripts": ["node_modules/jquery/dist/jquery.min.js"]
           },
           "configurations": {
-            "local": {
-              "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.local.ts"
-                }
-              ]
-            },
-            "development": {
-              "sourceMap": true,
-              "aot": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.dev.ts"
-                }
-              ]
-            },
             "production": {
               "sourceMap": true,
               "aot": true,
