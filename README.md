@@ -1,4 +1,4 @@
-# Angular 7 Boilerplate
+# Angular 8 Boilerplate
 
 1. Go to project folder and install dependencies:
 

@@ -16,20 +16,6 @@ import { Observable } from 'rxjs';
 
 import { ErrorHandlerInterceptor } from '@app/core/http/error-handler.interceptor';
 
-// HttpClient is declared in a re-exported module, so we have to extend the original module to make it work properly
-// (see https://github.com/Microsoft/TypeScript/issues/13897)
-declare module '@angular/common/http/src/client' {
-  // Augment HttpClient with the added configuration methods from HttpService, to allow in-place replacement of
-  // HttpClient with HttpService using dependency injection
-  export interface HttpClient {
-    /**
-     * Skips default error handler for this request.
-     * @return {HttpClient} The new instance.
-     */
-    skipErrorHandler(): HttpClient;
-  }
-}
-
 // From @angular/common/http/src/interceptor: allows to chain interceptors
 class HttpInterceptorHandler implements HttpHandler {
   constructor(
