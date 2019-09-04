@@ -15,7 +15,7 @@ import { FormErrorWrapperComponent } from '@app/shared/form-error-wrapper/form-e
     CommonModule,
     FormsModule,
     RouterModule,
-    NgbModule.forRoot(),
+    NgbModule,
     ReactiveFormsModule
   ],
   declarations: [

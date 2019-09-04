@@ -68,4 +68,8 @@ you can also use the command `ng generate` directly.
 
 ### PWA Service worker support
 
-To enalbe service worker go to `src/main.ts` and uncomment service worker code.
+To enable service worker go to `src/main.ts` and uncomment service worker code.
+
+### Ivy Support
+
+To enable/disable Ivy go to `src/tsconfig.app.json` and change variable value `enableIvy`.

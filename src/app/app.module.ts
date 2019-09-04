@@ -19,7 +19,7 @@ import { SharedModule } from '@app/shared';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgbModule.forRoot(),
+    NgbModule,
     RouterModule.forRoot(AppRoutes),
     CoreModule,
     SharedModule
